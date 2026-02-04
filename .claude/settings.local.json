@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm install)",
+      "WebFetch(domain:yoyomatch.com)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(powershell -Command \"New-Item -Path ''C:\\\\Users\\\\loysc\\\\Desktop\\\\Compaatible-main\\\\LP first'' -ItemType Directory -Force\")",
+      "Bash(powershell -Command:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

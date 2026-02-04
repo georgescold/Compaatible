@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Police 2 - Libre Baskerville + Outfit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-red-pure: #99001B;
+      --color-red-dark: #7A0016;
+      --color-black: #1A1A1A;
+      --color-gray-dark: #4A4A4A;
+      --color-white-cream: #FBF9F7;
+      --color-gray-light: #E8E8E8;
+
+      --font-serif: 'Libre Baskerville', serif;
+      --font-sans: 'Outfit', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-white-cream);
+      color: var(--color-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Font Info Banner */
+    .font-info {
+      background: var(--color-black);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .font-info h3 {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    .font-info p {
+      font-size: 1.1rem;
+    }
+
+    .font-info strong {
+      color: #FF6B7A;
+    }
+
+    /* Header Demo */
+    .header-demo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-gray-light);
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--color-black);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--color-red-pure);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-gray-dark);
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 0 80px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      border: 1px solid var(--color-gray-light);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      color: var(--color-gray-dark);
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-black);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--color-red-pure);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-family: var(--font-sans);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--color-gray-dark);
+      max-width: 550px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-red-pure);
+      color: white;
+      padding: 18px 36px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(153, 0, 27, 0.3);
+    }
+
+    /* Cards Section */
+    .cards-section {
+      padding: 60px 0;
+    }
+
+    .section-label {
+      display: block;
+      text-align: center;
+      color: var(--color-red-pure);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .cards-section h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--color-black);
+      margin-bottom: 50px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-black);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--color-gray-dark);
+      line-height: 1.6;
+    }
+
+    /* Quote Section */
+    .quote-section {
+      background: linear-gradient(135deg, var(--color-red-pure) 0%, var(--color-red-dark) 100%);
+      color: white;
+      padding: 50px 40px;
+      border-radius: 24px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .quote-section blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .quote-section cite {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    /* Typography Showcase */
+    .typography-showcase {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      margin-top: 40px;
+    }
+
+    .typography-showcase h4 {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-gray-dark);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+
+    .type-sample {
+      margin-bottom: 30px;
+    }
+
+    .type-sample:last-child {
+      margin-bottom: 0;
+    }
+
+    .type-label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: var(--color-red-pure);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .sample-h1 {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color-black);
+      line-height: 1.2;
+    }
+
+    .sample-h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-black);
+    }
+
+    .sample-h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-black);
+    }
+
+    .sample-body {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--color-gray-dark);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .sample-small {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--color-gray-dark);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Font Info -->
+    <div class="font-info">
+      <h3>Option 2</h3>
+      <p><strong>Titres :</strong> Libre Baskerville (serif traditionnel, chaleureux)</p>
+      <p><strong>Corps :</strong> Outfit (sans-serif géométrique, moderne)</p>
+      <p><strong>Ambiance :</strong> Confiance, maturité, sérieux mais accessible</p>
+    </div>
+
+    <!-- Header Demo -->
+    <header class="header-demo">
+      <div class="logo">
+        <div class="logo-icon">♥</div>
+        Compaatible
+      </div>
+      <nav class="nav-links">
+        <a href="#">Le principe</a>
+        <a href="#">Comment ça marche ?</a>
+        <a href="#">FAQ</a>
+        <a href="#">Blog</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="badge">Basé sur la science de la personnalité</span>
+      <h1>Ton <span>âme sœur</span> existe.<br>On va la trouver.</h1>
+      <p>Fini les dates décevants et la solitude prolongée. Compaatible analyse ta personnalité en profondeur pour te présenter la personne la plus compatible avec toi.</p>
+      <a href="#" class="btn-primary">Participe à l'expérience →</a>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-section">
+      <span class="section-label">Notre Technologie</span>
+      <h2>La science au service de l'amour</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Test de personnalité</h3>
+          <p>Inspiré du modèle Big Five, notre test combine plus de 50 questions pour comprendre qui tu es vraiment.</p>
+        </div>
+        <div class="card">
+          <h3>Anonymat garanti</h3>
+          <p>Personne ne saura que tu participes. Ton identité n'est révélée qu'à ton match.</p>
+        </div>
+        <div class="card">
+          <h3>Algorithme précis</h3>
+          <p>Nous analysons 16 dimensions de ta personnalité pour identifier la personne idéale.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <blockquote>"La compatibilité psychologique est le meilleur prédicteur de la satisfaction dans une relation."</blockquote>
+      <cite>Dr. John Gottman, psychologue</cite>
+    </section>
+
+    <!-- Typography Showcase -->
+    <div class="typography-showcase">
+      <h4>Aperçu typographique complet</h4>
+
+      <div class="type-sample">
+        <div class="type-label">Titre principal (H1)</div>
+        <div class="sample-h1">L'amour commence ici</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Titre de section (H2)</div>
+        <div class="sample-h2">Des histoires qui commencent</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Titre de carte (H3)</div>
+        <div class="sample-h3">Compatibilité profonde</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Corps de texte</div>
+        <div class="sample-body">Tu ne cherches pas juste un date. Tu cherches quelqu'un avec qui construire quelque chose de vrai. Notre algorithme analyse ta personnalité pour trouver la personne qui te correspond vraiment.</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Texte secondaire</div>
+        <div class="sample-small">Offre exclusive première édition · Avril 2025</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
